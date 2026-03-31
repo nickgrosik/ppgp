@@ -12,12 +12,12 @@ This project is part of my cybersecurity portfolio and will continue to grow as 
 - RSA‑OAEP message decryption
 - Menu‑driven command‑line interface that keeps things simple and readable
 - Automatic key storage in a user directory
+- Message signing and verification
+- Key inspector (fingerprints, metadata)
 
 ---
 
 ## Planned Features
-- Message signing and verification
-- Key inspector (fingerprints, metadata)
 - Key export/import
 - Colorized CLI output
 - Beginner “Learn Mode” improvements
@@ -40,7 +40,7 @@ An interactive assistant that teaches cryptography concepts and answers question
 ### **AI File Classifier (optional)**
 Identifies file types before encryption and recommends best practices (like when hybrid encryption makes sense).
 
-These features will be optional add‑ons — the core cryptography stays clean, simple, and fully manual.
+These features will be optional add‑ons. The core cryptography will stay clean, simple, and fully manual.
 
 ---
 
@@ -49,14 +49,14 @@ These features will be optional add‑ons — the core cryptography stays clean,
 Clone the repository:
 
 ```bash
-git clone https://github.com/nickgrosik/pgpg
-cd pgpg
+git clone https://github.com/nickgrosik/ppgp
+cd ppgp
 ```
 
 Run the program:
 
 ```bash
-python -m pgpg.main
+python -m ppgp.main
 ```
 
 ---
@@ -69,7 +69,7 @@ This project strengthens my understanding of cryptography fundamentals, Python d
 ## Directory Structure
 
 ```text
-pgpg/
+ppgp/
     main.py
     menu.py
     keygen.py
