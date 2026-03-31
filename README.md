@@ -1,15 +1,19 @@
 # PPGP — Pete’s Pretty Good Privacy
 
-PPGP is a simple, beginner‑friendly Python tool that teaches the basics of public‑key cryptography. It supports RSA keypair generation, message encryption, and message decryption using secure modern padding schemes. The goal is to give learners a hands‑on way to understand how real cryptographic tools work under the hood.
+PPGP is a beginner‑friendly Python tool for learning the basics of public‑key cryptography. It handles RSA keypair generation, message encryption, and message decryption using modern, secure padding schemes. The goal is to give learners a hands‑on way to understand how real cryptographic tools work under the hood — without needing a PhD or a tolerance for academic PDFs.
 
-This project is part of my cybersecurity portfolio and will continue to grow as I add more features and polish it.
+This project is part of my cybersecurity portfolio and will keep growing as I add more features, polish the UX, and continue giving the program way more personality than a cryptography tool probably needs.
+
+---
 
 ## Features
 - RSA keypair generation (private + public)
 - RSA‑OAEP message encryption
 - RSA‑OAEP message decryption
-- Menu‑driven command‑line interface
+- Menu‑driven command‑line interface with a narrator who may or may not be okay
 - Automatic key storage in a user directory
+
+---
 
 ## Planned Features
 - Message signing and verification
@@ -19,34 +23,52 @@ This project is part of my cybersecurity portfolio and will continue to grow as 
 - Beginner “Learn Mode” improvements
 - Packaging as a pip‑installable module
 
+---
+
 ## Future AI Features
-PPGP will eventually include optional AI-powered tools to make cryptography more accessible and beginner-friendly:
-- **AI Key Inspector**  
-  Explains key properties, detects weak configurations, and summarizes metadata in plain English.
-- **AI Encryption Helper**  
-  Provides guidance on what can be safely encrypted, warns about common mistakes, and explains errors.
-- **AI Learning Mode**  
-  An interactive assistant that teaches cryptography concepts, answers questions, and breaks down complex topics.  
-- **AI File Classifier (optional)**  
-  Identifies file types before encryption and recommends best practices, such as when to use hybrid encryption.
+Optional AI‑powered helpers to make cryptography less intimidating and more interactive:
 
-These features are planned as optional add-ons to enhance usability without replacing the core cryptographic functionality.
+### **AI Key Inspector**
+Breaks down key properties, explains metadata, and warns about weak configurations in plain English.
 
+### **AI Encryption Helper**
+Guides users on what can be safely encrypted, explains errors, and prevents common mistakes.
+
+### **AI Learning Mode**
+An interactive assistant that teaches cryptography concepts and answers questions as you explore the tool.
+
+### **AI File Classifier (optional)**
+Identifies file types before encryption and recommends best practices (like when hybrid encryption makes sense).
+
+These features will be optional add‑ons — the core cryptography stays clean, simple, and fully manual.
+
+---
 
 ## How to Run
+
 Clone the repository:
 
-git clone https://github.com/nickgrosik/ppgp
-cd ppgp
+```bash
+git clone https://github.com/nickgrosik/pgpg
+cd pgpg
+```
 
 Run the program:
 
+```bash
 python -m pgpg.main
+```
+
+---
 
 ## Project Purpose
-This project was built to strengthen my understanding of cryptography fundamentals, Python development, and secure key handling. It’s designed to be approachable for beginners while still following real cryptographic standards.
+This project strengthens my understanding of cryptography fundamentals, Python development, and secure key handling. It’s designed to be approachable for beginners while still following real cryptographic standards.
+
+---
 
 ## Directory Structure
+
+```text
 pgpg/
     main.py
     menu.py
@@ -55,10 +77,17 @@ pgpg/
     decrypt.py
     beginner.py
     advanced.py
+```
 
-Keys and ciphertext are stored automatically in:
+---
 
-~/.ppgp/keys/
+## Key Storage
 
-## License
-MIT License
+PPGP stores generated keys and encrypted files in a dedicated project directory.  
+By default, this is:
+
+```
+D:/PPGP/keys/   (Windows example)
+```
+
+You can change this path in `config.py` if you want to use a different location.
