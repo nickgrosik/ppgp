@@ -1,8 +1,8 @@
 # PPGP — Pete’s Pretty Good Privacy
 
-PPGP is a beginner‑friendly Python tool for learning the basics of public‑key cryptography. It handles RSA keypair generation, message encryption, and message decryption using modern, secure padding schemes. The goal is to give learners a hands‑on way to understand how real cryptographic tools work under the hood — without needing a PhD or a tolerance for academic PDFs.
+PPGP is a beginner friendly Python tool that teaches the basics of public key cryptography. It handles RSA keypair generation, message encryption, and message decryption using modern and secure padding schemes. The goal is to give learners a hands on way to understand how real cryptographic tools work under the hood without needing a PhD or a tolerance for academic PDFs.
 
-This project is part of my cybersecurity portfolio and will keep growing as I add more features, polish the UX, and continue giving the program way more personality than a cryptography tool probably needs.
+This project is part of my cybersecurity portfolio and will continue to grow as I add more features, improve the user experience, and give the program more personality than a cryptography tool usually gets.
 
 ---
 
