@@ -10,7 +10,7 @@ This project is part of my cybersecurity portfolio and will continue to grow as 
 - RSA keypair generation (private + public)
 - RSA‑OAEP message encryption
 - RSA‑OAEP message decryption
-- Menu‑driven command‑line interface with a narrator who may or may not be okay
+- Menu‑driven command‑line interface that keeps things simple and readable
 - Automatic key storage in a user directory
 
 ---
