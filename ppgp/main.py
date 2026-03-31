@@ -1,8 +1,12 @@
 from .menu import show_menu
 
 def main():
-    print("Welcome to PPGP - Pete's Pretty Good Privacy")
-    print("A simple tool for learning and using encryption.")
+    print("\n====================================")
+    print("        Welcome to PPGP")
+    print("  Pete's Pretty Good Privacy Tool")
+    print("====================================")
+    print("Congrats, you made it. Let's get started.\n")
+
     show_menu()
 
 if __name__ == "__main__":

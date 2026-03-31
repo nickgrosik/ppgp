@@ -1,12 +1,15 @@
 import os
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
+from pathlib import Path
 
-KEYS_DIR = os.path.expanduser("~/.ppgp/keys")
+BASE_DIR = Path(__file__).resolve().parent.parent
+KEY_DIR = BASE_DIR / "keys"
+KEY_DIR.mkdir(exist_ok=True)
 
 def generate_keypair():
     # Make sure the keys directory exists
-    os.makedirs(KEYS_DIR, exist_ok=True)
+    os.makedirs(KEY_DIR, exist_ok=True)
 
     # Generate a private key
     private_key = rsa.generate_private_key(
@@ -31,8 +34,8 @@ def generate_keypair():
     )
 
     # Save the keys
-    private_path = os.path.join(KEYS_DIR, "mykey.priv")
-    public_path = os.path.join(KEYS_DIR, "mykey.pub")
+    private_path = os.path.join(KEY_DIR, "mykey.priv")
+    public_path = os.path.join(KEY_DIR, "mykey.pub")
 
     with open(public_path, "wb") as f:
         f.write(public_pem)
