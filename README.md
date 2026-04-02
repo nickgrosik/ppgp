@@ -83,11 +83,13 @@ ppgp/
 
 ## Key Storage
 
-PPGP stores generated keys and encrypted files in a dedicated project directory.  
-By default, this is:
+PPGP stores generated files in directories at the project root (same level as `README.md`).
+By default:
 
 ```
-D:/PPGP/keys/   (Windows example)
+./keys/        (RSA key files)
+./encrypted/   (ciphertext outputs)
+./signatures/  (signature outputs)
 ```
 
-You can change this path in `config.py` if you want to use a different location.
+These locations are configured in `ppgp/config.py`.

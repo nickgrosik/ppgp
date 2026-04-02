@@ -21,7 +21,7 @@ def _short_year(dt: datetime) -> str:
 
 def _time_string(dt: datetime) -> str:
     # Example: 3-49pm
-    return dt.strftime("%#I-%M%p").lower() # Windows-friendly
+    return dt.strftime("%I-%M%p").lstrip("0").lower()
 
 
 def generate_timestamped_name(prefix: str, ext: str, directory: Path) -> Path:
