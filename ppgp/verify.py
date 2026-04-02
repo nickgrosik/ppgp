@@ -14,6 +14,26 @@ def _list_signature_files():
     files.sort()
     return files
 
+
+def verify_signature_integrity(public_key, signature, data):
+    """Verify a signature and print a clear integrity result."""
+    try:
+        public_key.verify(
+            signature,
+            data,
+            padding.PSS(
+                mgf=padding.MGF1(hashes.SHA256()),
+                salt_length=padding.PSS.MAX_LENGTH
+            ),
+            hashes.SHA256()
+        )
+        print("[PPGP] Integrity check passed: signature is valid for this file.")
+        return True
+    except Exception:
+        print("[PPGP] Integrity check failed: signature does not match this file.")
+        return False
+
+
 def verify_signature():
     # Lead public key
     pub_path = KEY_DIR / "mykey.pub"

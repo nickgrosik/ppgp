@@ -12,13 +12,13 @@ def show_beginner_page():
 
     print("What is encryption?")
     print("Encryption takes information and scrambles it into something both humans and computers can't read.")
-    print("To docode something that is encrypted, you need a key that will unscramble everything.\n")
+    print("To decode something that is encrypted, you need a key that will unscramble everything.\n")
 
     print("What is a key?")
     print("A key is a special code. Some things lock things (public keys), and some keys unlock things (private keys).\n")
 
     print("What is signing?")
-    print("Signing proves that a message really came from someone. It's like a digit fingerprint.\n")
+    print("Signing proves that a message really came from someone. It's like a digital fingerprint.\n")
 
     print("What does PPGP do?")
     print("PPGP helps you lock your messages, unlock messages sent to you, and prove that you're really the person who sent something. It gives you the tools to keep your information safe and understand how encryption works.\n")

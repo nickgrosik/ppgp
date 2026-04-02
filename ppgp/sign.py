@@ -24,7 +24,7 @@ def sign_message():
         print("\nNo encrypted files found to sign\n")
         return
     
-    print("\nAvailable encrypted fils to sign:")
+    print("\nAvailable encrypted files to sign:")
     for idx, path in enumerate(files, start=1):
         print(f"{idx}. {path.name}")
 
@@ -58,4 +58,4 @@ def sign_message():
         f.write(signature)
 
     print("\nSignature created successfully!")
-    print(f"Signature saved tp {sig_path}\n")
+    print(f"Signature saved to {sig_path}\n")
