@@ -1,8 +1,7 @@
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const path = require("path");
 
-const isDev = !app.isPackaged;
-const rendererUrl = process.env.PPGP_RENDERER_URL || "http://127.0.0.1:5173";
+const isDev = false;
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -19,10 +18,11 @@ function createWindow() {
   });
 
   if (isDev) {
-    win.loadURL(rendererUrl);
+    win.loadURL("http://127.0.0.1:5173");
     win.webContents.openDevTools({ mode: "detach" });
   } else {
-    win.loadFile(path.join(__dirname, "..", "dist", "index.html"));
+    const indexPath = path.resolve(__dirname, "../dist/index.html");
+    win.loadFile(indexPath);
   }
 }
 
