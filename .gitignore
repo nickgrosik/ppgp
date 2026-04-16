@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Electron build output
+dist/
+out/
+win-unpacked/
+*.asar
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
